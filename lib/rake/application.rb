@@ -109,6 +109,7 @@ module Rake
 
       yield
 
+    ensure
       thread_pool.join
       if options.job_stats
         stats = thread_pool.statistics
